@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "a7167a80-2c1e-4af6-9e6c-09a1726de1dd",
+		"name": "Partial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3MVG9T992fY2Y4vvJxJ55IpDkio0xMNCUY_LWU4Mg4skz_90qwAiTjXF6h17c9xSdQfgzEwz94FqRcrbylyrf",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "05BA1D9BB0922A49E4C0D83DFC8289C7BED0B5000057EF67AFCEABE8B32CDBB4",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "caesarstone.testing@gmail.com.admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qualitest123dCB2UFAh6uQtowtlBVznnuDg",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "6Cel800D5t0000008aLp8885t0000004CRvyJuAMmK7s289MKJdghUcRZi2D2JUs47rbw8oYrIdzwM6QTRCvPP614qK2X8T34gBdn2rvTMJ",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"test",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "6Cel800D7Y0000001cS98887Y000000TQGaGMsSxj65zmszZcAilJlZsdIc1ryvRrsD0Fd2hSjOhJmc8ZCYSKekcGGo8NBJP4GZoJtiobLn",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/query/?q=SELECT+name+from+Account",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT+name+from+Account"
+						},
+						{
+							"key": "token",
+							"value": "6Cel800D7Y0000001cS98887Y000000TQGaGMsSxj65zmszZcAilJlZsdIc1ryvRrsD0Fd2hSjOhJmc8ZCYSKekcGGo8NBJP4GZoJtiobLn",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/query/?q=SELECT+Id,+name+from+Contact",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT+Id,+name+from+Contact"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D7Y0000001cS9!AQkAQDP1rQNncnkOgWeheDFQorq9gmKBqPHNFrYJXKRnd7jmUlNteR1yVxU1Cpzq9oK89OvWcxNzcyRhMWq0pcQIsU8l6EGK",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "AccountId",
+							"value": "0013V00000AD4iCQAT",
+							"type": "text"
+						},
+						{
+							"key": "FirstName",
+							"value": "API_Test",
+							"type": "text"
+						},
+						{
+							"key": "LastName",
+							"value": "API_Test",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "test12314@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Phone",
+							"value": "0984845565",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/sobjects/contact",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"sobjects",
+						"contact"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT+name+from+Account",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "6Cel800D7Y0000001cS98887Y000000TQGaGMsSxj65zmszZcAilJlZsdIc1ryvRrsD0Fd2hSjOhJmc8ZCYSKekcGGo8NBJP4GZoJtiobLn",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/query/?q=SELECT+name+from+Job__c",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT+name+from+Job__c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job V2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/sobjects/Job__c?field=Retailer__c",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"sobjects",
+						"Job__c"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "Retailer__c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Status__c\": \"Quote\"\r\n}"
+				},
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/sobjects/Job__c",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"sobjects",
+						"Job__c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Job",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"JobDescription__c\": \"Quote1\"\r\n}"
+				},
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/sobjects/Job__c/a1w5t00000003BFAAY",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"sobjects",
+						"Job__c",
+						"a1w5t00000003BFAAY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5t0000008aLp!AR4AQIAWHtAgsG3Xh4OB6hJp4Pas0XwXOLgIYFUyp0sqDwkjlgc3uNWC2BF.tXpYeeMVaTashfImsuhLLocLFtIVi4jkHtL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Job__c\": \"a1w5t00000003BFAAY\"\r\n}"
+				},
+				"url": {
+					"raw": "https://caesarstone--cspartial.my.salesforce.com/services/data/v52.0/sobjects/JobProduct__c",
+					"protocol": "https",
+					"host": [
+						"caesarstone--cspartial",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v52.0",
+						"sobjects",
+						"JobProduct__c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
