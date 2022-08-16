@@ -89,7 +89,7 @@ Varify Created Quote (one room & product)
     sleep    2s
     capture page screenshot
     ${CountProducts}=    get element count    xpath:(//*[contains(text(),"Kitchen")])
-    should be true    ${CountProducts}>2
+    should be true    ${CountProducts}>=1
 
 
 Check Price1

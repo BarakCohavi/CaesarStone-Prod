@@ -19,10 +19,10 @@ Login To CSpartial
     ${G}=    get window size
     wait until page contains    Forgot Your Password?
     #input text    username   caesarstone.testing@gmail.com.api
-    Execute javascript    document.getElementById('username').value="caesarstone.testing@gmail.com.api"
+    Execute javascript    document.getElementById('username').value="sftestuser@caesarstone.com"
     capture page screenshot
     #input password    password   2w3e4r5t6y
-    Execute javascript    document.getElementById('password').value="2w3e4r5t6y"
+    Execute javascript    document.getElementById('password').value="1q2w3e4r5t6y"
 
     #set window size    1920    1080
     capture page screenshot
@@ -30,6 +30,8 @@ Login To CSpartial
     click element    rememberUn
     capture page screenshot
     click button    Login
+
+    sleep  60s
     Wait Until Page Contains Element     xpath://*[contains(text(),"Caesarstone")]    60s
 
 
