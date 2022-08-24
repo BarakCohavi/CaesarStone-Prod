@@ -30,8 +30,6 @@ Login To CSpartial
     click element    rememberUn
     capture page screenshot
     click button    Login
-
-    sleep  60s
     Wait Until Page Contains Element     xpath://*[contains(text(),"Caesarstone")]    60s
 
 

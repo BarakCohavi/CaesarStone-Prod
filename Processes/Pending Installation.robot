@@ -99,8 +99,8 @@ Generate COC Form
     sleep  5s
     click element    xpath://*[@class="uiMenu"]/div/div/div/a/lightning-icon
 
-    Wait Until Page Contains Element    xpath://*[@title="Generate COC Form"]    60s
-    click element    xpath://*[@title="Generate COC Form"]
+    Wait Until Page Contains Element    xpath://*[@title="COC Form"]    60s
+    click element    xpath://*[@title="COC Form"]
 
     Wait Until Page Contains Element    xpath://*[@title="Sign now"]    60s
     click element    xpath://*[@title="Sign now"]

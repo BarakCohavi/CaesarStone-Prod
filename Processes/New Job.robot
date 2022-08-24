@@ -76,6 +76,7 @@ Choose Measurement && Installation Time
 
     ${Measurement Date Preference}   Get Current Date    result_format=%d/%m/%Y
     Choose Fabricator
+    scroll element into view   xpath://span[text()="Measurement Date Preference"]/parent::label/following-sibling::div/a[@class="datePicker-openIcon display"]
     click link    xpath://span[text()="Measurement Date Preference"]/parent::label/following-sibling::div/a[@class="datePicker-openIcon display"]
     Wait Until Page Contains Element    xpath://*[text()="Installation Date Preference"]/parent::label/following-sibling::div/input    60s
     input text    xpath://*[text()="Measurement Date Preference"]/parent::label/following-sibling::div/input    ${Measurement Date Preference}
@@ -84,7 +85,7 @@ Choose Measurement && Installation Time
     CLICK ELEMENT    xpath://*[text()="07:00 - 12:00"]
 
     ${Installation Date Preference}   Get Current Date    result_format=%d/%m/%Y
-
+    #scroll element into view   xpath://*[text()="Installation Date Preference"]/parent::label/following-sibling::div/input
     click element    xpath://span[text()="Installation Time Preference"]/parent::span/following-sibling::div/div[@class="uiPopupTrigger"]/div/div/a
     Wait Until Page Contains Element    xpath://*[text()="Installation Date Preference"]/parent::label/following-sibling::div/input    60s
     input text    xpath://*[text()="Installation Date Preference"]/parent::label/following-sibling::div/input    ${Installation Date Preference}
@@ -100,6 +101,8 @@ Choose Measurement && Installation Time
 Choose Fabricator
 
     wait until page contains element    xpath://*[text()="Choose A Fabricator"]/parent::label/following-sibling::div/div/div/div/input    60s
+    wait until page does not contain element  xpath://*[contains(text(),"successfully")]   60s
+    #scroll element into view    xpath://*[text()="Choose A Fabricator"]
     ${CountProducts}=    get element count    xpath://*[@class="deleteIcon"]
     IF    ${CountProducts}==1
     click element    xpath://*[@class="deleteIcon"]
@@ -109,7 +112,7 @@ Choose Fabricator
     #click element    xpath://*[@class="deleteIcon"]
     #Wait Until Page Contains Element    xpath://*[@title="$ ${fabricator}"]    60s
     #click element    xpath://*[@title="${Fabricator_Account}"]
-    ${fabricator}    ReadInput  2  8
+    ${fabricator}    ReadInput  2  7
     input text    //*[text()="Choose A Fabricator"]/parent::label/following-sibling::div/div/div/div/input    ${fabricator}
     Wait Until Page Contains Element    xpath://*[@title="${fabricator}"]    60s
     sleep    1s

@@ -7,7 +7,7 @@ def randomNumber(min,max):
     return randrange(int(min), int(max))
 
 def NumJob(NumJob):
-    return NumJob[4:8]
+    return NumJob[4:9]
 
 def subDate(DateDate):
     return DateDate[0:10]

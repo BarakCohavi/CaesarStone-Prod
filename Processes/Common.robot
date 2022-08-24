@@ -76,6 +76,7 @@ Navigating To "Experience As User"
 
 LogOut As Fabricator
     scroll element into view    xpath://*[@title="Expand search"]
+    sleep   3s
     click element    xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]
     click element    xpath://*[@title="Log Out"]
 
@@ -87,15 +88,19 @@ Search Job By Job Name
 
     wait until page contains element    xpath://*[@type="search" and @placeholder="Search..."]    60s
     input text   //*[@type="search" and @placeholder="Search..."]    ${CURJOB}
-    wait until page contains element    xpath://span/mark[text()="${CURJOB}"]   60s
-    click element    xpath://span/mark[text()="${CURJOB}"]
 
+
+    #wait until page contains element    xpath://span/mark[text()="${CURJOB}"]   60s
+    #click element    xpath://span/mark[text()="${CURJOB}"]
+    press key    xpath://*[@type="search" and @placeholder="Search..."]   \\13
+    wait until page contains element    xpath://a[text()="${CURJOB}"]    60s
+    click element    xpath://a[text()="${CURJOB}"][1]
 
 select checkbox COCUploaded
     wait until page contains element    xpath://*[text()="Pick Slip Generated?"]    60s
     scroll element into view    xpath://*[text()="Do Not Send Cleaning Kit"]
     click button    xpath://*[text()="COC Uploaded"]/parent::div/following-sibling::div/button
-    select checkbox    xpath://*[@name="COCUploaded__c"]
+    #select checkbox    xpath://*[@name="COCUploaded__c"]
 
     sleep    0.5
 

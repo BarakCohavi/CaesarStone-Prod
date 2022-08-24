@@ -73,4 +73,4 @@ Check There Is Only One Room
 
 Check Products After Removing
     ${CountProducts}=    get element count    xpath://*[contains(text(),"${Room1}")]
-    should be true    ${CountProducts}<=6
+    should be true    ${CountProducts}<=11

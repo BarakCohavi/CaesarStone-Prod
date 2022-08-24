@@ -11,6 +11,7 @@ ${path_File} =  ${EXECDIR}\\Input Files\\MyFile.pdf
 
 *** Keywords ***
 Proccess
+
     [Arguments]    ${CURJOB}
     Login To Experience As Fabricator
     Click Search CaesarStone Page    ${CURJOB}
@@ -23,16 +24,16 @@ Proccess
 
 Close The Job
     wait until page contains element    xpath://*[text()="Job Number"]    60s
-    sleep    1s
+    sleep    4s
     scroll element into view    xpath://*[text()="Pick Slip Generated?"]
     click button    xpath://*[text()="COC Uploaded"]/parent::div/following-sibling::div/button
 
     scroll element into view    xpath://*[text()="Status"]
+    sleep  2s
     click element    xpath://*[text()="Status"]/parent::lightning-combobox/div/lightning-base-combobox/div/div/button
-
     click element    xpath://*[@role="listbox"]/lightning-base-combobox-item[10]
 
-    sleep    0.1s
+    sleep    1s
     scroll element into view    xpath://*[text()="Installation Time Preference"]
     select checkbox    xpath://*[@name="Test_Job__c"]
 

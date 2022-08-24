@@ -212,13 +212,13 @@ Add One Product To Quote
          ${CountProducts}=    get element count    xpath://*[text()="Item List:"]/parent::h2/parent::div/parent::header/parent::div/parent::article/div/slot/c-quick-quote-item-list-row/div/div/lightning-button-icon
          ${Condition1}=    Evaluate    ${CountProducts} == 1
          Exit For Loop If    ${Condition1}
-         click element    xpath://*[text()="Item List:"]/parent::h2/parent::div/parent::header/parent::div/parent::article/div/slot/c-quick-quote-item-list-row/div/div/lightning-button-icon
+         click element    xpath://*[text()="Item List:"]/parent::h2/parent::div/parent::header/parent::div/parent::article/div/slot/c-quick-quote-item-list-row[2]/div/div/lightning-button-icon
 
      END
 
     click element    xpath:(//*[@class="slds-card__body"]/slot/c-quick-quote-item-list-row[1]/div/div[2]/c-search-autocomplete-selector/div/div/div/div/div/input[@placeholder="Search by name or code"])[1]
     click element    xpath:(//*[@class="slds-card__body"]/slot/c-quick-quote-item-list-row[1]/div/div[2]/c-search-autocomplete-selector/div/div/div/div/div[2]/ul/c-search-autocomplete-selector-item[1]/li/div/span/span)[1]
-    input text    ${Quantity in first_row}    3
+    input text    ${Quantity in first_row}    10
 
 
     click element    ${Product in fifth_row}
