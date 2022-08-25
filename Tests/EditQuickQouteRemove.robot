@@ -17,7 +17,6 @@ ${Room2}=    Bathroom 1
 *** Test Cases ***
 Edit Quick Quote remove
     [Documentation]    Creation Quick Quote Add(1 room,1 product)
-    [Tags]    Edit QQ Add And Remove Room+Product
     Creation Quick Quote Add one room Add one product
     Close Current Window
     Switch Window Back    0

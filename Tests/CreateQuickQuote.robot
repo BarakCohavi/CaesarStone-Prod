@@ -8,7 +8,7 @@ Suite Setup    Login Retailer.Initiate Web Tests    ${BROWSER}    ${BROWSER_OPTI
 Suite Teardown    Common.Terminate Web Tests
 *** Variables ***
 ${BROWSER} =    chrome
-${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768")                 #;add_argument("--headless");add_argument("--disable-gpu")
+${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768");add_argument("--headless");add_argument("--disable-gpu")
 
 
 ${room description} =    Kitchen 1
@@ -35,7 +35,6 @@ ${Notes in fourth_row} =    xpath:(//*[@class="slds-card__body"]/slot/c-quick-qu
 *** Test Cases ***
 Create Quick Qoute one produst+room
     [Documentation]    This Test Case of Create QQ
-    [Tags]    Quick qoute
     ${csConnectTest_Owner_aus1 page}=    ReadInput  2  5
     common.Navigating To "Experience As User"    ${csConnectTest_Owner_aus1 page}
     Clicking "Create Quick Quote" On Navbar

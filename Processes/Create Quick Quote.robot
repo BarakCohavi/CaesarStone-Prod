@@ -191,7 +191,7 @@ Verifying Quick Quote Was Created
 Check There Is A Product
     capture page screenshot
     ${CountProducts}=    get element count    xpath:(//*[contains(text(),"Kitchen 1")])
-    should be true    ${CountProducts}==2
+    should be true    ${CountProducts}>=2
 
 Click Close
     Wait Until Page Contains Element    xpath://*[@class="slds-button slds-button--neutral closeBtn uiButton"]    60s

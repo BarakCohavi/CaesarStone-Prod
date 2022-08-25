@@ -13,7 +13,6 @@ ${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disabl
 
 *** Test Cases ***
 EditQuote-QQ-add
-    [Tags]    Edit QQ Add Room+Product
     create quick quote.process
     Click Edit Quote
     Add New Product To The Current room
