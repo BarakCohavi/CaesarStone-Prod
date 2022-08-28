@@ -15,7 +15,7 @@ ${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disabl
 
 *** Test Cases ***
 Create Qoute -> Edit -> Remove (QC)
-   set selenium speed    0.5s
+   #set selenium speed    0.5s
     Create Qoute.Proccess
 
     ${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
