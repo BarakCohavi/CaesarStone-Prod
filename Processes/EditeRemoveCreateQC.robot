@@ -44,7 +44,7 @@ Check Price
     should be true    ${Total_Inc} == ${Cur_Total_Exc}
 
 Check Price-1
-    [Arguments]        ${Total_Inc}   ${Total_Exc}
+    [Arguments]         ${Total_Exc}  ${Total_Inc}
     wait until page contains element      xpath://*[text()="Job Details"]    50s
 
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
