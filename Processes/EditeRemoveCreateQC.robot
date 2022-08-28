@@ -99,7 +99,7 @@ Check Price1
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     sleep    5s
     Click Search CaesarStone Page    ${CURJOB}
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
     sleep    7s
     reload page
    # FOR    ${num}    IN RANGE    999

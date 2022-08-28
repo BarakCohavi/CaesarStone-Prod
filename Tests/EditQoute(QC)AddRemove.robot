@@ -20,7 +20,7 @@ Create Qoute -> Edit -> Remove (QC)
 
     ${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     ${Old_Total_Inc}=    ProductPrice    ${var}
-    ${var}=     get text    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span
+    ${var}=     get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     ${Old_Total_Exc}=    ProductPrice   ${var}
     ${Old_Total_Inc}=    cutComma    ${Old_Total_Inc}
     ${Old_Total_Exc}=    cutComma    ${Old_Total_Exc}
