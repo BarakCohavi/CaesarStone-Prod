@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220828 12:33:15.799" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220828 15:12:18.314" rpa="false" schemaversion="3">
 <suite id="s1" name="EditQoute(QC)AddRemove" source="C:\Users\abeer.hasan\Desktop\CaesarStone-Prod\Tests\EditQoute(QC)AddRemove.robot">
 <kw name="Initiate Web Tests" library="Login Retailer" type="SETUP">
 <arg>${BROWSER}</arg>
@@ -12,122 +12,122 @@
 <arg>${Browser}</arg>
 <arg>options=${Options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220828 12:33:16.393" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220828 12:33:16.393" endtime="20220828 12:33:19.517"/>
+<msg timestamp="20220828 15:12:18.904" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220828 15:12:18.904" endtime="20220828 15:12:21.814"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:16.393" endtime="20220828 12:33:19.517"/>
+<status status="PASS" starttime="20220828 15:12:18.904" endtime="20220828 15:12:21.815"/>
 </kw>
 <kw name="Login To CSpartial" library="Login Retailer">
 <kw name="Read Input" library="functions">
 <var>${cspartial login_page}</var>
 <arg>2</arg>
 <arg>1</arg>
-<msg timestamp="20220828 12:33:19.585" level="INFO">${cspartial login_page} = https://caesarstone.my.salesforce.com/</msg>
-<status status="PASS" starttime="20220828 12:33:19.518" endtime="20220828 12:33:19.586"/>
+<msg timestamp="20220828 15:12:21.827" level="INFO">${cspartial login_page} = https://caesarstone.my.salesforce.com/</msg>
+<status status="PASS" starttime="20220828 15:12:21.815" endtime="20220828 15:12:21.827"/>
 </kw>
 <kw name="Read Input" library="functions">
 <var>${login_username}</var>
 <arg>2</arg>
 <arg>2</arg>
-<msg timestamp="20220828 12:33:19.610" level="INFO">${login_username} = sftestuser@caesarstone.com</msg>
-<status status="PASS" starttime="20220828 12:33:19.587" endtime="20220828 12:33:19.610"/>
+<msg timestamp="20220828 15:12:21.835" level="INFO">${login_username} = sftestuser@caesarstone.com</msg>
+<status status="PASS" starttime="20220828 15:12:21.827" endtime="20220828 15:12:21.835"/>
 </kw>
 <kw name="Read Input" library="functions">
 <var>${login_password}</var>
 <arg>2</arg>
 <arg>3</arg>
-<msg timestamp="20220828 12:33:19.625" level="INFO">${login_password} = 1q2w3e4r5t6y</msg>
-<status status="PASS" starttime="20220828 12:33:19.611" endtime="20220828 12:33:19.625"/>
+<msg timestamp="20220828 15:12:21.845" level="INFO">${login_password} = 1q2w3e4r5t6y</msg>
+<status status="PASS" starttime="20220828 15:12:21.835" endtime="20220828 15:12:21.845"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${cspartial login_page}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220828 12:33:19.626" level="INFO">Opening url 'https://caesarstone.my.salesforce.com/'</msg>
-<status status="PASS" starttime="20220828 12:33:19.625" endtime="20220828 12:33:22.656"/>
+<msg timestamp="20220828 15:12:21.845" level="INFO">Opening url 'https://caesarstone.my.salesforce.com/'</msg>
+<status status="PASS" starttime="20220828 15:12:21.845" endtime="20220828 15:12:24.476"/>
 </kw>
 <kw name="Get Window Size" library="SeleniumLibrary">
 <var>${G}</var>
 <doc>Returns current window width and height as integers.</doc>
-<msg timestamp="20220828 12:33:22.665" level="INFO">${G} = (1360, 768)</msg>
-<status status="PASS" starttime="20220828 12:33:22.656" endtime="20220828 12:33:22.666"/>
+<msg timestamp="20220828 15:12:24.482" level="INFO">${G} = (1296, 696)</msg>
+<status status="PASS" starttime="20220828 15:12:24.476" endtime="20220828 15:12:24.482"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Forgot Your Password?</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:22.666" endtime="20220828 12:33:22.690"/>
+<status status="PASS" starttime="20220828 15:12:24.483" endtime="20220828 15:12:24.499"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.getElementById('username').value="sftestuser@caesarstone.com"</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220828 12:33:22.692" level="INFO">Executing JavaScript:
+<msg timestamp="20220828 15:12:24.500" level="INFO">Executing JavaScript:
 document.getElementById('username').value="sftestuser@caesarstone.com"
 Without any arguments.</msg>
-<status status="PASS" starttime="20220828 12:33:22.691" endtime="20220828 12:33:22.702"/>
+<status status="PASS" starttime="20220828 15:12:24.499" endtime="20220828 15:12:24.505"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:33:23.108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1401.png"&gt;&lt;img src="selenium-screenshot-1401.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:33:22.703" endtime="20220828 12:33:23.109"/>
+<msg timestamp="20220828 15:12:24.777" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1433.png"&gt;&lt;img src="selenium-screenshot-1433.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220828 15:12:24.506" endtime="20220828 15:12:24.777"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.getElementById('password').value="1q2w3e4r5t6y"</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220828 12:33:23.110" level="INFO">Executing JavaScript:
+<msg timestamp="20220828 15:12:24.778" level="INFO">Executing JavaScript:
 document.getElementById('password').value="1q2w3e4r5t6y"
 Without any arguments.</msg>
-<status status="PASS" starttime="20220828 12:33:23.109" endtime="20220828 12:33:23.120"/>
+<status status="PASS" starttime="20220828 15:12:24.777" endtime="20220828 15:12:24.783"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:33:23.518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1402.png"&gt;&lt;img src="selenium-screenshot-1402.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:33:23.121" endtime="20220828 12:33:23.518"/>
+<msg timestamp="20220828 15:12:25.050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1434.png"&gt;&lt;img src="selenium-screenshot-1434.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220828 15:12:24.783" endtime="20220828 15:12:25.050"/>
 </kw>
 <kw name="Get Window Size" library="SeleniumLibrary">
 <var>${G}</var>
 <doc>Returns current window width and height as integers.</doc>
-<msg timestamp="20220828 12:33:23.526" level="INFO">${G} = (1360, 768)</msg>
-<status status="PASS" starttime="20220828 12:33:23.520" endtime="20220828 12:33:23.526"/>
+<msg timestamp="20220828 15:12:25.059" level="INFO">${G} = (1296, 696)</msg>
+<status status="PASS" starttime="20220828 15:12:25.050" endtime="20220828 15:12:25.059"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>rememberUn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:33:23.527" level="INFO">Clicking element 'rememberUn'.</msg>
-<status status="PASS" starttime="20220828 12:33:23.526" endtime="20220828 12:33:23.588"/>
+<msg timestamp="20220828 15:12:25.060" level="INFO">Clicking element 'rememberUn'.</msg>
+<status status="PASS" starttime="20220828 15:12:25.059" endtime="20220828 15:12:25.112"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:33:24.019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1403.png"&gt;&lt;img src="selenium-screenshot-1403.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:33:23.589" endtime="20220828 12:33:24.020"/>
+<msg timestamp="20220828 15:12:25.394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1435.png"&gt;&lt;img src="selenium-screenshot-1435.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220828 15:12:25.112" endtime="20220828 15:12:25.394"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:33:24.020" level="INFO">Clicking button 'Login'.</msg>
-<status status="PASS" starttime="20220828 12:33:24.020" endtime="20220828 12:33:26.827"/>
+<msg timestamp="20220828 15:12:25.395" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20220828 15:12:25.394" endtime="20220828 15:12:28.649"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath://*[contains(text(),"Caesarstone")]</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:26.827" endtime="20220828 12:33:31.509"/>
+<status status="PASS" starttime="20220828 15:12:28.649" endtime="20220828 15:12:35.212"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:19.518" endtime="20220828 12:33:31.510"/>
+<status status="PASS" starttime="20220828 15:12:21.815" endtime="20220828 15:12:35.213"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:16.392" endtime="20220828 12:33:31.510"/>
+<status status="PASS" starttime="20220828 15:12:18.903" endtime="20220828 15:12:35.213"/>
 </kw>
 <test id="s1-t1" name="Create Qoute -&gt; Edit -&gt; Remove (QC)" line="17">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220828 12:33:31.514" endtime="20220828 12:33:31.514"/>
+<status status="PASS" starttime="20220828 15:12:35.214" endtime="20220828 15:12:35.214"/>
 </kw>
 <kw name="Proccess" library="Create Qoute">
 <kw name="Read Input" library="functions">
 <var>${User_Link_Page}</var>
 <arg>2</arg>
 <arg>5</arg>
-<msg timestamp="20220828 12:33:31.533" level="INFO">${User_Link_Page} = https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view</msg>
-<status status="PASS" starttime="20220828 12:33:31.517" endtime="20220828 12:33:31.533"/>
+<msg timestamp="20220828 15:12:35.222" level="INFO">${User_Link_Page} = https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view</msg>
+<status status="PASS" starttime="20220828 15:12:35.214" endtime="20220828 15:12:35.222"/>
 </kw>
 <kw name="Navigating To &quot;Experience As User&quot;" library="Common">
 <arg>${User_Link_Page}</arg>
@@ -136,1010 +136,542 @@ Without any arguments.</msg>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${User_Link}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220828 12:33:31.536" level="INFO">Opening url 'https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view'</msg>
-<status status="PASS" starttime="20220828 12:33:31.536" endtime="20220828 12:33:33.398"/>
+<msg timestamp="20220828 15:12:35.222" level="INFO">Opening url 'https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view'</msg>
+<status status="PASS" starttime="20220828 15:12:35.222" endtime="20220828 15:12:36.771"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${User_Link}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220828 12:33:33.399" level="INFO">Opening url 'https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view'</msg>
-<status status="PASS" starttime="20220828 12:33:33.398" endtime="20220828 12:33:34.783"/>
+<msg timestamp="20220828 15:12:36.771" level="INFO">Opening url 'https://caesarstone.lightning.force.com/lightning/r/Contact/0033V00000QR1D0QAL/view'</msg>
+<status status="PASS" starttime="20220828 15:12:36.771" endtime="20220828 15:12:37.947"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Account Name"]</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:34.783" endtime="20220828 12:33:37.089"/>
+<status status="PASS" starttime="20220828 15:12:37.948" endtime="20220828 15:12:40.079"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${ARROW&gt;Show more actions}</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:37.089" endtime="20220828 12:33:37.614"/>
+<status status="PASS" starttime="20220828 15:12:40.079" endtime="20220828 15:12:40.604"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:31.535" endtime="20220828 12:33:37.614"/>
+<status status="PASS" starttime="20220828 15:12:35.222" endtime="20220828 15:12:40.604"/>
 </kw>
 <kw name="Login To Experience As User" library="Common">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${ARROW&gt;Show more actions}</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:33:37.615" endtime="20220828 12:33:38.686"/>
+<status status="PASS" starttime="20220828 15:12:40.604" endtime="20220828 15:12:41.673"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:33:39.200" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220828 12:33:38.686" endtime="20220828 12:33:39.200"/>
+<msg timestamp="20220828 15:12:42.189" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20220828 15:12:41.673" endtime="20220828 15:12:42.189"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${ARROW&gt;Show more actions}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:33:39.201" level="INFO">Clicking button 'xpath://*[@class="slds-button slds-button_icon-border-filled"]'.</msg>
-<status status="PASS" starttime="20220828 12:33:39.201" endtime="20220828 12:33:41.917"/>
+<msg timestamp="20220828 15:12:42.190" level="INFO">Clicking button 'xpath://*[@class="slds-button slds-button_icon-border-filled"]'.</msg>
+<status status="PASS" starttime="20220828 15:12:42.190" endtime="20220828 15:12:44.876"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${CountProducts}</var>
 <arg>xpath://*[text()="Log in to Experience as User"]</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:33:42.431" level="INFO">${CountProducts} = 1</msg>
-<status status="PASS" starttime="20220828 12:33:41.917" endtime="20220828 12:33:42.431"/>
+<msg timestamp="20220828 15:12:45.406" level="INFO">${CountProducts} = 1</msg>
+<status status="PASS" starttime="20220828 15:12:44.877" endtime="20220828 15:12:45.406"/>
 </kw>
 <if>
 <branch type="IF" condition="${CountProducts}==0">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ARROW&gt;Show more actions}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:33:42.432" endtime="20220828 12:33:42.432"/>
+<status status="NOT RUN" starttime="20220828 15:12:45.406" endtime="20220828 15:12:45.406"/>
 </kw>
-<status status="NOT RUN" starttime="20220828 12:33:42.431" endtime="20220828 12:33:42.432"/>
+<status status="NOT RUN" starttime="20220828 15:12:45.406" endtime="20220828 15:12:45.406"/>
 </branch>
-<status status="PASS" starttime="20220828 12:33:42.431" endtime="20220828 12:33:42.432"/>
+<status status="PASS" starttime="20220828 15:12:45.406" endtime="20220828 15:12:45.406"/>
 </if>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Log in to Experience as User"]</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:42.432" endtime="20220828 12:33:42.946"/>
+<status status="PASS" starttime="20220828 15:12:45.406" endtime="20220828 15:12:45.921"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Log in to Experience as User}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:33:42.946" level="INFO">Clicking element 'xpath://*[text()="Log in to Experience as User"]'.</msg>
-<status status="PASS" starttime="20220828 12:33:42.946" endtime="20220828 12:33:44.008"/>
+<msg timestamp="20220828 15:12:45.922" level="INFO">Clicking element 'xpath://*[text()="Log in to Experience as User"]'.</msg>
+<status status="PASS" starttime="20220828 15:12:45.922" endtime="20220828 15:12:46.994"/>
 </kw>
 <kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Log in to Experience as User"]</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:44.008" endtime="20220828 12:33:48.439"/>
+<status status="PASS" starttime="20220828 15:12:46.994" endtime="20220828 15:12:51.958"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${CountProducts}</var>
 <arg>${ARROW&gt;Show more actions}</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:33:48.963" level="INFO">${CountProducts} = 0</msg>
-<status status="PASS" starttime="20220828 12:33:48.439" endtime="20220828 12:33:48.963"/>
+<msg timestamp="20220828 15:12:52.468" level="INFO">${CountProducts} = 0</msg>
+<status status="PASS" starttime="20220828 15:12:51.958" endtime="20220828 15:12:52.468"/>
 </kw>
 <if>
 <branch type="IF" condition="${CountProducts}==1">
 <kw name="Login To Experience As User" library="Common">
-<status status="NOT RUN" starttime="20220828 12:33:48.965" endtime="20220828 12:33:48.965"/>
+<status status="NOT RUN" starttime="20220828 15:12:52.468" endtime="20220828 15:12:52.469"/>
 </kw>
-<status status="NOT RUN" starttime="20220828 12:33:48.963" endtime="20220828 12:33:48.965"/>
+<status status="NOT RUN" starttime="20220828 15:12:52.468" endtime="20220828 15:12:52.469"/>
 </branch>
-<status status="PASS" starttime="20220828 12:33:48.963" endtime="20220828 12:33:48.965"/>
+<status status="PASS" starttime="20220828 15:12:52.468" endtime="20220828 15:12:52.469"/>
 </if>
-<status status="PASS" starttime="20220828 12:33:37.614" endtime="20220828 12:33:48.965"/>
+<status status="PASS" starttime="20220828 15:12:40.604" endtime="20220828 15:12:52.469"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:31.533" endtime="20220828 12:33:48.965"/>
+<status status="PASS" starttime="20220828 15:12:35.222" endtime="20220828 15:12:52.469"/>
 </kw>
 <kw name="Select Frames" library="Create Qoute">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath:(//*[@class="slds-button slds-button_brand"])[1]</arg>
 <arg>130s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:33:48.966" endtime="20220828 12:33:49.492"/>
+<status status="PASS" starttime="20220828 15:12:52.470" endtime="20220828 15:12:53.011"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath:(//*[@class="slds-button slds-button_brand"])[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:33:49.494" level="INFO">Clicking element 'xpath:(//*[@class="slds-button slds-button_brand"])[1]'.</msg>
-<status status="PASS" starttime="20220828 12:33:49.493" endtime="20220828 12:33:50.606"/>
+<msg timestamp="20220828 15:12:53.011" level="INFO">Clicking element 'xpath:(//*[@class="slds-button slds-button_brand"])[1]'.</msg>
+<status status="PASS" starttime="20220828 15:12:53.011" endtime="20220828 15:12:54.111"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://iframe[@class="canvasIframe"]</arg>
 <arg>90s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:33:50.606" endtime="20220828 12:33:51.681"/>
+<status status="PASS" starttime="20220828 15:12:54.111" endtime="20220828 15:12:55.166"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>//iframe[@class="canvasIframe"]</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:33:51.682" level="INFO">Selecting frame '//iframe[@class="canvasIframe"]'.</msg>
-<status status="PASS" starttime="20220828 12:33:51.681" endtime="20220828 12:33:53.168"/>
+<msg timestamp="20220828 15:12:55.167" level="INFO">Selecting frame '//iframe[@class="canvasIframe"]'.</msg>
+<status status="PASS" starttime="20220828 15:12:55.166" endtime="20220828 15:12:56.311"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.9m</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:34:47.175" level="INFO">Slept 54 seconds</msg>
-<status status="PASS" starttime="20220828 12:33:53.168" endtime="20220828 12:34:47.175"/>
+<msg timestamp="20220828 15:13:50.313" level="INFO">Slept 54 seconds</msg>
+<status status="PASS" starttime="20220828 15:12:56.311" endtime="20220828 15:13:50.313"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://iframe[@title="Canvas IFrame for application QuoteCountertops."]</arg>
 <arg>90s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:34:47.176" endtime="20220828 12:34:48.768"/>
+<status status="PASS" starttime="20220828 15:13:50.314" endtime="20220828 15:13:51.894"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>//iframe[@title="Canvas IFrame for application QuoteCountertops."]</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:34:48.769" level="INFO">Selecting frame '//iframe[@title="Canvas IFrame for application QuoteCountertops."]'.</msg>
-<status status="PASS" starttime="20220828 12:34:48.769" endtime="20220828 12:34:49.833"/>
+<msg timestamp="20220828 15:13:51.895" level="INFO">Selecting frame '//iframe[@title="Canvas IFrame for application QuoteCountertops."]'.</msg>
+<status status="PASS" starttime="20220828 15:13:51.894" endtime="20220828 15:13:52.957"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>//iframe[@title="QuoteCountertops"]</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:34:49.834" level="INFO">Selecting frame '//iframe[@title="QuoteCountertops"]'.</msg>
-<status status="PASS" starttime="20220828 12:34:49.833" endtime="20220828 12:34:50.886"/>
+<msg timestamp="20220828 15:13:52.957" level="INFO">Selecting frame '//iframe[@title="QuoteCountertops"]'.</msg>
+<status status="PASS" starttime="20220828 15:13:52.957" endtime="20220828 15:13:54.011"/>
 </kw>
-<status status="PASS" starttime="20220828 12:33:48.965" endtime="20220828 12:34:50.886"/>
+<status status="PASS" starttime="20220828 15:12:52.469" endtime="20220828 15:13:54.012"/>
 </kw>
 <kw name="Choose Room" library="Create Qoute">
 <kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Please wait while the design is ready."]</arg>
 <doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20220828 12:34:50.888" endtime="20220828 12:34:51.418"/>
+<status status="PASS" starttime="20220828 15:13:54.012" endtime="20220828 15:13:54.536"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]</arg>
 <arg>100s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:34:51.418" endtime="20220828 12:34:53.011"/>
+<status status="PASS" starttime="20220828 15:13:54.536" endtime="20220828 15:13:56.101"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:34:53.012" level="INFO">Clicking element 'xpath://*[@class="bv-item-container"]/div/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20220828 12:34:53.011" endtime="20220828 12:34:54.230"/>
+<msg timestamp="20220828 15:13:56.102" level="INFO">Clicking element 'xpath://*[@class="bv-item-container"]/div/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220828 15:13:56.101" endtime="20220828 15:13:57.303"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:34:56.238" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:34:54.230" endtime="20220828 12:34:56.238"/>
+<msg timestamp="20220828 15:13:59.311" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220828 15:13:57.303" endtime="20220828 15:13:59.312"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button</arg>
 <arg>100s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:34:56.239" endtime="20220828 12:34:57.828"/>
+<msg timestamp="20220828 15:15:40.926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1436.png"&gt;&lt;img src="selenium-screenshot-1436.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220828 15:15:40.927" level="FAIL">Element with locator 'xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button' not found.</msg>
+<status status="FAIL" starttime="20220828 15:13:59.312" endtime="20220828 15:15:40.930"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:34:57.828" level="INFO">Clicking button 'xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220828 12:34:57.828" endtime="20220828 12:35:00.583"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.931" endtime="20220828 15:15:40.931"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${CountProducts}</var>
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:35:01.098" level="INFO">${CountProducts} = 0</msg>
-<status status="PASS" starttime="20220828 12:35:00.583" endtime="20220828 12:35:01.098"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.931" endtime="20220828 15:15:40.931"/>
 </kw>
 <if>
 <branch type="IF" condition="${CountProducts}==1">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:35:01.100" endtime="20220828 12:35:01.100"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.931" endtime="20220828 15:15:40.931"/>
 </kw>
-<status status="NOT RUN" starttime="20220828 12:35:01.099" endtime="20220828 12:35:01.100"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.931" endtime="20220828 15:15:40.931"/>
 </branch>
-<status status="PASS" starttime="20220828 12:35:01.099" endtime="20220828 12:35:01.100"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.931" endtime="20220828 15:15:40.931"/>
 </if>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[text()="Add to Quote"]</arg>
 <arg>100s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:01.100" endtime="20220828 12:35:02.164"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Add to Quote"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:02.165" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:02.164" endtime="20220828 12:35:03.334"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${CountProducts}</var>
 <arg>xpath://*[contains(text(),"Product info")]</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:35:03.861" level="INFO">${CountProducts} = 1</msg>
-<status status="PASS" starttime="20220828 12:35:03.335" endtime="20220828 12:35:03.861"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <if>
 <branch type="IF" condition="${CountProducts}==1">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Add to Quote"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:03.863" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:03.862" endtime="20220828 12:35:05.166"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
-<status status="PASS" starttime="20220828 12:35:03.862" endtime="20220828 12:35:05.166"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </branch>
-<status status="PASS" starttime="20220828 12:35:03.862" endtime="20220828 12:35:05.166"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </if>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button</arg>
 <arg>90s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:05.166" endtime="20220828 12:35:06.950"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:35:08.952" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:35:06.950" endtime="20220828 12:35:08.952"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:08.953" level="INFO">Clicking button 'xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220828 12:35:08.952" endtime="20220828 12:35:11.753"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.932" endtime="20220828 15:15:40.932"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]</arg>
 <arg>90s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:11.753" endtime="20220828 12:35:12.807"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.933" endtime="20220828 15:15:40.933"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:12.808" level="INFO">Clicking button 'xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:12.807" endtime="20220828 12:35:15.578"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.933" endtime="20220828 15:15:40.933"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Add to Quote"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:15.580" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:15.578" endtime="20220828 12:35:16.859"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.933" endtime="20220828 15:15:40.933"/>
 </kw>
-<status status="PASS" starttime="20220828 12:34:50.887" endtime="20220828 12:35:16.860"/>
+<status status="FAIL" starttime="20220828 15:13:54.012" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Add SPLASHBACK" library="Create Qoute">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:16.861" endtime="20220828 12:35:17.916"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:35:20.920" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220828 12:35:17.916" endtime="20220828 12:35:20.920"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:20.921" level="INFO">Clicking button 'xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220828 12:35:20.920" endtime="20220828 12:35:23.683"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:23.683" endtime="20220828 12:35:24.731"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:24.733" level="INFO">Clicking button 'xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:24.732" endtime="20220828 12:35:27.458"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:27.459" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:27.459" endtime="20220828 12:35:28.779"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:35:29.784" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220828 12:35:28.779" endtime="20220828 12:35:29.784"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:16.860" endtime="20220828 12:35:29.784"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Add Edge" library="Create Qoute">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div/div[1]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:29.785" endtime="20220828 12:35:30.837"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:30.838" level="INFO">Clicking element 'xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div'.</msg>
-<status status="PASS" starttime="20220828 12:35:30.837" endtime="20220828 12:35:32.108"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div[1]/div[2]/button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:32.109" level="INFO">Clicking element 'xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div[1]/div[2]/button'.</msg>
-<status status="PASS" starttime="20220828 12:35:32.108" endtime="20220828 12:35:33.348"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:35:34.352" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220828 12:35:33.349" endtime="20220828 12:35:34.352"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts1}</var>
-<arg>xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div[1]/div[2]/button</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:35:34.878" level="INFO">${CountProducts1} = 0</msg>
-<status status="PASS" starttime="20220828 12:35:34.352" endtime="20220828 12:35:34.878"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts1}==1">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@class="bv-item-container"]/div/div[1]/div/div[1]/div[1]/div[2]/button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:35:34.879" endtime="20220828 12:35:34.879"/>
-</kw>
-<status status="NOT RUN" starttime="20220828 12:35:34.879" endtime="20220828 12:35:34.880"/>
-</branch>
-<status status="PASS" starttime="20220828 12:35:34.879" endtime="20220828 12:35:34.880"/>
-</if>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:34.880" endtime="20220828 12:35:35.928"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:35.929" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:35.928" endtime="20220828 12:35:37.174"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts}</var>
-<arg>xpath://*[contains(text(),"Product info")]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:35:37.702" level="INFO">${CountProducts} = 1</msg>
-<status status="PASS" starttime="20220828 12:35:37.174" endtime="20220828 12:35:37.702"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts}&gt;0">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:37.705" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:37.703" endtime="20220828 12:35:38.952"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:37.702" endtime="20220828 12:35:38.953"/>
-</branch>
-<status status="PASS" starttime="20220828 12:35:37.702" endtime="20220828 12:35:38.953"/>
-</if>
-<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
-<arg>xpath://*[contains(text(),"Product info")]</arg>
-<arg>50s</arg>
-<doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20220828 12:35:38.954" endtime="20220828 12:35:39.475"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:29.785" endtime="20220828 12:35:39.475"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Add CUTOUTS" library="Create Qoute">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:39.476" endtime="20220828 12:35:40.531"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:40.532" level="INFO">Clicking button 'xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]'.</msg>
-<status status="PASS" starttime="20220828 12:35:40.531" endtime="20220828 12:35:43.299"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:43.300" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:43.300" endtime="20220828 12:35:44.528"/>
-</kw>
-<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
-<arg>xpath://*[contains(text(),"Additional Tap Hole")]</arg>
-<arg>50s</arg>
-<doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20220828 12:35:44.528" endtime="20220828 12:35:45.072"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:39.476" endtime="20220828 12:35:45.072"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Add SPECIALY CUTS" library="Create Qoute">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:45.073" endtime="20220828 12:35:46.127"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:46.127" level="INFO">Clicking button 'xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]'.</msg>
-<status status="PASS" starttime="20220828 12:35:46.127" endtime="20220828 12:35:48.920"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:48.921" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:48.920" endtime="20220828 12:35:50.163"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:45.072" endtime="20220828 12:35:50.163"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Add ADDITIONAL TRAVEL" library="Create Qoute">
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:35:52.179" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:35:50.166" endtime="20220828 12:35:52.179"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<arg>90s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:35:52.179" endtime="20220828 12:35:53.294"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:53.295" level="INFO">Clicking button 'xpath:(//*[@class="ui-quantity-button ui-quantity-button--plus"])[1]'.</msg>
-<status status="PASS" starttime="20220828 12:35:53.295" endtime="20220828 12:35:56.061"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add to Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:56.062" level="INFO">Clicking element 'xpath://*[text()="Add to Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:56.061" endtime="20220828 12:35:57.333"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Save Quote"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:35:57.334" level="INFO">Clicking element 'xpath://*[text()="Save Quote"]'.</msg>
-<status status="PASS" starttime="20220828 12:35:57.333" endtime="20220828 12:35:58.548"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:36:00.556" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:35:58.549" endtime="20220828 12:36:00.556"/>
-</kw>
-<status status="PASS" starttime="20220828 12:35:50.163" endtime="20220828 12:36:00.557"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:36:01.568" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1404.png"&gt;&lt;img src="selenium-screenshot-1404.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:36:00.557" endtime="20220828 12:36:01.569"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Total_Inc}</var>
 <arg>xpath:(//*[@class="dcart-column__value"])[2]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:36:02.620" level="INFO">${Total_Inc} = $2355.10</msg>
-<status status="PASS" starttime="20220828 12:36:01.569" endtime="20220828 12:36:02.620"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.934" endtime="20220828 15:15:40.934"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Total_Exc}</var>
 <arg>xpath:(//*[@class="dcart-column__value"])[1]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:36:03.683" level="INFO">${Total_Exc} = $214.10</msg>
-<status status="PASS" starttime="20220828 12:36:02.621" endtime="20220828 12:36:03.683"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Substringg" library="functions">
 <var>${Total_Inc}</var>
 <arg>${Total_Inc}</arg>
-<msg timestamp="20220828 12:36:03.683" level="INFO">${Total_Inc} = 2355.10</msg>
-<status status="PASS" starttime="20220828 12:36:03.683" endtime="20220828 12:36:03.683"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Substringg" library="functions">
 <var>${Total_Exc}</var>
 <arg>${Total_Exc}</arg>
-<msg timestamp="20220828 12:36:03.685" level="INFO">${Total_Exc} = 214.10</msg>
-<status status="PASS" starttime="20220828 12:36:03.685" endtime="20220828 12:36:03.685"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Multiple 10" library="functions">
 <var>${Total_Exc}</var>
 <arg>${Total_Exc}</arg>
-<msg timestamp="20220828 12:36:03.686" level="INFO">${Total_Exc} = 2141.0</msg>
-<status status="PASS" starttime="20220828 12:36:03.685" endtime="20220828 12:36:03.686"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Choose Customer" library="Create Qoute">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts}</var>
-<arg>xpath://span[text()="customer"]/parent::div/following-sibling::div/div/li</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:36:04.211" level="INFO">${CountProducts} = 2</msg>
-<status status="PASS" starttime="20220828 12:36:03.686" endtime="20220828 12:36:04.211"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts}==0">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Add Customer"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:36:04.212" endtime="20220828 12:36:04.212"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>firstName</arg>
-<arg>Automated</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:36:04.212" endtime="20220828 12:36:04.212"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>lastName</arg>
-<arg>Test</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:36:04.213" endtime="20220828 12:36:04.213"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>city</arg>
-<arg>${CityInput}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:36:04.213" endtime="20220828 12:36:04.213"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>state</arg>
-<arg>Australian Capital Territory</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:36:04.213" endtime="20220828 12:36:04.213"/>
-</kw>
-<status status="NOT RUN" starttime="20220828 12:36:04.212" endtime="20220828 12:36:04.213"/>
-</branch>
-<branch type="ELSE IF" condition="${CountProducts}&gt;0">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="customer"]/parent::div/parent::div/div[2]/div/li[${CountProducts}]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:36:04.215" level="INFO">Clicking element 'xpath://*[text()="customer"]/parent::div/parent::div/div[2]/div/li[2]'.</msg>
-<status status="PASS" starttime="20220828 12:36:04.214" endtime="20220828 12:36:05.412"/>
-</kw>
-<status status="PASS" starttime="20220828 12:36:04.214" endtime="20220828 12:36:05.412"/>
-</branch>
-<status status="PASS" starttime="20220828 12:36:04.211" endtime="20220828 12:36:05.412"/>
-</if>
-<status status="PASS" starttime="20220828 12:36:03.686" endtime="20220828 12:36:05.413"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Save Qoute" library="Create Qoute">
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${url}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20220828 12:36:05.926" level="INFO">${url} = Quote</msg>
-<status status="PASS" starttime="20220828 12:36:05.414" endtime="20220828 12:36:05.926"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:(//*[text()="Save Quote"])[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:36:05.928" level="INFO">Clicking element 'xpath:(//*[text()="Save Quote"])[2]'.</msg>
-<status status="PASS" starttime="20220828 12:36:05.926" endtime="20220828 12:36:07.145"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="View &amp; Process Job"]</arg>
-<arg>100s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:36:07.146" endtime="20220828 12:36:13.496"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>${url}</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220828 12:36:13.496" endtime="20220828 12:36:17.637"/>
-</kw>
-<status status="PASS" starttime="20220828 12:36:05.413" endtime="20220828 12:36:17.638"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="View &amp; Process Job" library="Create Qoute">
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>//iframe[@class="canvasIframe"]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:36:17.639" level="INFO">Selecting frame '//iframe[@class="canvasIframe"]'.</msg>
-<status status="PASS" starttime="20220828 12:36:17.639" endtime="20220828 12:36:18.712"/>
-</kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>//iframe[@title="Canvas IFrame for application QuoteCountertops."]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:36:18.713" level="INFO">Selecting frame '//iframe[@title="Canvas IFrame for application QuoteCountertops."]'.</msg>
-<status status="PASS" starttime="20220828 12:36:18.713" endtime="20220828 12:36:19.771"/>
-</kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>//iframe[@title="QuoteCountertops"]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220828 12:36:19.772" level="INFO">Selecting frame '//iframe[@title="QuoteCountertops"]'.</msg>
-<status status="PASS" starttime="20220828 12:36:19.771" endtime="20220828 12:36:20.817"/>
-</kw>
-<kw name="QC CREATED" library="Create Qoute">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="View &amp; Process Job"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:36:20.818" endtime="20220828 12:36:21.344"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="View &amp; Process Job"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:36:21.345" level="INFO">Clicking element 'xpath://*[text()="View &amp; Process Job"]'.</msg>
-<status status="PASS" starttime="20220828 12:36:21.344" endtime="20220828 12:36:22.559"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:36:23.563" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1405.png"&gt;&lt;img src="selenium-screenshot-1405.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:36:22.559" endtime="20220828 12:36:23.563"/>
-</kw>
-<status status="PASS" starttime="20220828 12:36:20.817" endtime="20220828 12:36:23.564"/>
-</kw>
-<status status="PASS" starttime="20220828 12:36:17.638" endtime="20220828 12:36:23.564"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.935" endtime="20220828 15:15:40.935"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>35s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:36:58.571" level="INFO">Slept 35 seconds</msg>
-<status status="PASS" starttime="20220828 12:36:23.565" endtime="20220828 12:36:58.571"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.936" endtime="20220828 15:15:40.936"/>
 </kw>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220828 12:36:58.571" endtime="20220828 12:36:59.131"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.937" endtime="20220828 15:15:40.937"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>xpath://*[text()="Job"]</arg>
 <arg>120s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:36:59.131" endtime="20220828 12:37:03.099"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.937" endtime="20220828 15:15:40.937"/>
 </kw>
 <kw name="Check Price" library="EditeRemoveCreateQC">
 <arg>${Total_Inc}</arg>
 <arg>${Total_Exc}</arg>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Job Details"]</arg>
-<arg>50s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:37:03.100" endtime="20220828 12:37:03.627"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.937" endtime="20220828 15:15:40.937"/>
+</kw>
+<kw name="VARIFY QC CREATED" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.937" endtime="20220828 15:15:40.937"/>
+</kw>
+<status status="FAIL" starttime="20220828 15:12:35.214" endtime="20220828 15:15:40.937"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${CURJOB}</var>
-<arg>//div[text()="Job"]/parent::h1/div/span</arg>
+<var>${var}</var>
+<arg>xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:37:04.691" level="INFO">${CURJOB} = JOB-17330</msg>
-<status status="PASS" starttime="20220828 12:37:03.627" endtime="20220828 12:37:04.691"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.938" endtime="20220828 15:15:40.938"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:09.700" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220828 12:37:04.691" endtime="20220828 12:37:09.700"/>
-</kw>
-<kw name="Click Search CaesarStone Page" library="Common">
-<arg>${CURJOB}</arg>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220828 12:37:09.701" endtime="20220828 12:37:10.225"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:37:10.225" endtime="20220828 12:37:12.042"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:37:12.042" endtime="20220828 12:37:13.894"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:37:13.894" endtime="20220828 12:37:14.942"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:20.457" level="INFO">Slept 5 seconds 500 milliseconds</msg>
-<status status="PASS" starttime="20220828 12:37:14.943" endtime="20220828 12:37:20.457"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>xpath:(//*[@data-key="search"]/parent::lightning-primitive-icon)[1]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:37:20.457" endtime="20220828 12:37:22.026"/>
-</kw>
-<kw name="Mouse Down" library="SeleniumLibrary">
-<arg>xpath:(//*[@data-key="search"]/parent::lightning-primitive-icon)[1]</arg>
-<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
-<msg timestamp="20220828 12:37:22.028" level="INFO">Simulating Mouse Down on element 'xpath:(//*[@data-key="search"]/parent::lightning-primitive-icon)[1]'.</msg>
-<status status="PASS" starttime="20220828 12:37:22.026" endtime="20220828 12:37:23.347"/>
-</kw>
-<kw name="Mouse Up" library="SeleniumLibrary">
-<arg>xpath:(//*[@data-key="search"]/parent::lightning-primitive-icon)[1]</arg>
-<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
-<msg timestamp="20220828 12:37:23.348" level="INFO">Simulating Mouse Up on element 'xpath:(//*[@data-key="search"]/parent::lightning-primitive-icon)[1]'.</msg>
-<status status="PASS" starttime="20220828 12:37:23.348" endtime="20220828 12:37:24.682"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:25.686" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220828 12:37:24.682" endtime="20220828 12:37:25.686"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@aria-label="Search..."]</arg>
-<arg>${CURJOB}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220828 12:37:25.687" level="INFO">Typing text 'JOB-17330' into text field '//*[@aria-label="Search..."]'.</msg>
-<status status="PASS" starttime="20220828 12:37:25.686" endtime="20220828 12:37:27.357"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@title="Search"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:37:27.358" level="INFO">Clicking element 'xpath://*[@title="Search"]'.</msg>
-<status status="PASS" starttime="20220828 12:37:27.357" endtime="20220828 12:37:28.474"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:30.484" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:37:28.474" endtime="20220828 12:37:30.484"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[contains(text(),"${CURJOB}")]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:37:30.484" endtime="20220828 12:37:31.016"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>xpath://*[contains(text(),"${CURJOB}")]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220828 12:37:31.016" endtime="20220828 12:37:32.590"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:34.594" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:37:32.590" endtime="20220828 12:37:34.594"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts}</var>
-<arg>xpath://*[contains(text(),"We searched for")]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:37:35.126" level="INFO">${CountProducts} = 0</msg>
-<status status="PASS" starttime="20220828 12:37:34.594" endtime="20220828 12:37:35.126"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:37:35.995" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1406.png"&gt;&lt;img src="selenium-screenshot-1406.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:37:35.127" endtime="20220828 12:37:35.996"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts}==1">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220828 12:37:35.996" endtime="20220828 12:37:35.996"/>
-</kw>
-<kw name="Click Search CaesarStone Page" library="Common">
-<arg>${CURJOB}</arg>
-<status status="NOT RUN" starttime="20220828 12:37:35.996" endtime="20220828 12:37:35.996"/>
-</kw>
-<status status="NOT RUN" starttime="20220828 12:37:35.996" endtime="20220828 12:37:35.996"/>
-</branch>
-<status status="PASS" starttime="20220828 12:37:35.996" endtime="20220828 12:37:35.996"/>
-</if>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts}</var>
-<arg>xpath://a[text()="${CURJOB}"]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:37:36.513" level="INFO">${CountProducts} = 1</msg>
-<status status="PASS" starttime="20220828 12:37:35.996" endtime="20220828 12:37:36.513"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:37:37.434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1407.png"&gt;&lt;img src="selenium-screenshot-1407.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:37:36.513" endtime="20220828 12:37:37.435"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts}==0">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220828 12:37:37.436" endtime="20220828 12:37:37.436"/>
-</kw>
-<kw name="Click Search CaesarStone Page" library="Common">
-<arg>${CURJOB}</arg>
-<status status="NOT RUN" starttime="20220828 12:37:37.436" endtime="20220828 12:37:37.436"/>
-</kw>
-<status status="NOT RUN" starttime="20220828 12:37:37.435" endtime="20220828 12:37:37.436"/>
-</branch>
-<status status="PASS" starttime="20220828 12:37:37.435" endtime="20220828 12:37:37.436"/>
-</if>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[@title="${CURJOB}"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:37:37.436" endtime="20220828 12:37:37.968"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@title="${CURJOB}"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:37:37.968" endtime="20220828 12:37:39.012"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${CountProducts}</var>
-<arg>xpath://a[text()="${CURJOB}"]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220828 12:37:39.533" level="INFO">${CountProducts} = 1</msg>
-<status status="PASS" starttime="20220828 12:37:39.012" endtime="20220828 12:37:39.533"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220828 12:37:40.525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1408.png"&gt;&lt;img src="selenium-screenshot-1408.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220828 12:37:39.534" endtime="20220828 12:37:40.525"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:37:42.542" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220828 12:37:40.526" endtime="20220828 12:37:42.542"/>
-</kw>
-<if>
-<branch type="IF" condition="${CountProducts}==1">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[@title="${CURJOB}"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220828 12:37:42.543" endtime="20220828 12:37:43.066"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@title="${CURJOB}"]</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220828 12:37:43.066" endtime="20220828 12:37:44.102"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@title="${CURJOB}"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220828 12:37:44.103" level="INFO">Clicking element 'xpath://*[@title="JOB-17330"]'.</msg>
-<status status="PASS" starttime="20220828 12:37:44.102" endtime="20220828 12:37:45.239"/>
-</kw>
-<status status="PASS" starttime="20220828 12:37:42.543" endtime="20220828 12:37:45.239"/>
-</branch>
-<status status="PASS" starttime="20220828 12:37:42.542" endtime="20220828 12:37:45.239"/>
-</if>
-<status status="PASS" starttime="20220828 12:37:09.700" endtime="20220828 12:37:45.240"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span</arg>
-<arg>50s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20220828 12:38:36.135" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1409.png"&gt;&lt;img src="selenium-screenshot-1409.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220828 12:38:36.136" level="FAIL">Element 'xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span' did not appear in 50 seconds.</msg>
-<status status="FAIL" starttime="20220828 12:37:45.241" endtime="20220828 12:38:36.143"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>7s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.144" endtime="20220828 12:38:36.144"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.144" endtime="20220828 12:38:36.144"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>7s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.144" endtime="20220828 12:38:36.144"/>
-</kw>
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.144" endtime="20220828 12:38:36.144"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span</arg>
-<arg>50s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.145" endtime="20220828 12:38:36.145"/>
+<kw name="Product Price" library="functions">
+<var>${Old_Total_Inc}</var>
+<arg>${var}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.938" endtime="20220828 15:15:40.938"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${var}</var>
 <arg>xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.145" endtime="20220828 12:38:36.145"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.938" endtime="20220828 15:15:40.938"/>
 </kw>
 <kw name="Product Price" library="functions">
-<var>${Cur_Total_Exc}</var>
+<var>${Old_Total_Exc}</var>
 <arg>${var}</arg>
-<status status="NOT RUN" starttime="20220828 12:38:36.145" endtime="20220828 12:38:36.145"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.938" endtime="20220828 15:15:40.938"/>
 </kw>
 <kw name="Cut Comma" library="functions">
-<var>${Cur_Total_Exc}</var>
-<arg>${Cur_Total_Exc}</arg>
-<status status="NOT RUN" starttime="20220828 12:38:36.145" endtime="20220828 12:38:36.145"/>
+<var>${Old_Total_Inc}</var>
+<arg>${Old_Total_Inc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.939" endtime="20220828 15:15:40.939"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath://*[text()="Fabricator Comments"]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.145" endtime="20220828 12:38:36.145"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.146" endtime="20220828 12:38:36.146"/>
-</kw>
-<kw name="Should Be True" library="BuiltIn">
-<arg>${Total_Exc} == ${Cur_Total_Exc}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.146" endtime="20220828 12:38:36.146"/>
-</kw>
-<status status="FAIL" starttime="20220828 12:37:03.099" endtime="20220828 12:38:36.147"/>
-</kw>
-<kw name="VARIFY QC CREATED" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.147" endtime="20220828 12:38:36.147"/>
-</kw>
-<status status="FAIL" starttime="20220828 12:33:31.515" endtime="20220828 12:38:36.148"/>
+<kw name="Cut Comma" library="functions">
+<var>${Old_Total_Exc}</var>
+<arg>${Old_Total_Exc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.939" endtime="20220828 15:15:40.939"/>
 </kw>
 <kw name="Click Edit Quote QC" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.149" endtime="20220828 12:38:36.149"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.939" endtime="20220828 15:15:40.939"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.150" endtime="20220828 12:38:36.150"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.939" endtime="20220828 15:15:40.939"/>
 </kw>
 <kw name="Switch handle alert Edit" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.150" endtime="20220828 12:38:36.150"/>
-</kw>
-<kw name="SELECT FRAMES Edit" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.151" endtime="20220828 12:38:36.151"/>
-</kw>
-<kw name="CLICK ADD ROOM Edit" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.151" endtime="20220828 12:38:36.151"/>
-</kw>
-<kw name="Choose Room" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.151" endtime="20220828 12:38:36.151"/>
-</kw>
-<kw name="Add SPLASHBACK" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.152" endtime="20220828 12:38:36.152"/>
-</kw>
-<kw name="Add Edge2" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.152" endtime="20220828 12:38:36.152"/>
-</kw>
-<kw name="Add CUTOUTS &amp; SPECIALY CUTS &amp; ADDITIONAL TRAVEL Edit" library="Create Qoute">
-<status status="NOT RUN" starttime="20220828 12:38:36.153" endtime="20220828 12:38:36.153"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>20s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.153" endtime="20220828 12:38:36.153"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.940" endtime="20220828 15:15:40.940"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220828 12:38:36.153" endtime="20220828 12:38:36.153"/>
+<status status="NOT RUN" starttime="20220828 15:15:40.940" endtime="20220828 15:15:40.940"/>
 </kw>
-<status status="FAIL" starttime="20220828 12:33:31.511" endtime="20220828 12:38:36.154">Element 'xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span' did not appear in 50 seconds.</status>
+<kw name="SELECT FRAMES Edit" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.940" endtime="20220828 15:15:40.940"/>
+</kw>
+<kw name="CLICK ADD ROOM Edit" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.941" endtime="20220828 15:15:40.941"/>
+</kw>
+<kw name="Choose Room" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.941" endtime="20220828 15:15:40.941"/>
+</kw>
+<kw name="Add SPLASHBACK" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.942" endtime="20220828 15:15:40.942"/>
+</kw>
+<kw name="Add Edge2" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.943" endtime="20220828 15:15:40.943"/>
+</kw>
+<kw name="Add CUTOUTS &amp; SPECIALY CUTS &amp; ADDITIONAL TRAVEL Edit" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.944" endtime="20220828 15:15:40.944"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.945" endtime="20220828 15:15:40.945"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Total_Inc}</var>
+<arg>xpath:(//*[@class="dcart-column__value"])[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.945" endtime="20220828 15:15:40.945"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Total_Exc}</var>
+<arg>xpath:(//*[@class="dcart-column__value"])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.946" endtime="20220828 15:15:40.946"/>
+</kw>
+<kw name="Substringg" library="functions">
+<var>${Total_Inc}</var>
+<arg>${Total_Inc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.946" endtime="20220828 15:15:40.946"/>
+</kw>
+<kw name="Substringg" library="functions">
+<var>${Total_Exc}</var>
+<arg>${Total_Exc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.947" endtime="20220828 15:15:40.947"/>
+</kw>
+<kw name="Multiple 10" library="functions">
+<var>${Total_Exc}</var>
+<arg>${Total_Exc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.947" endtime="20220828 15:15:40.947"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[text()="Checkout Now"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.948" endtime="20220828 15:15:40.948"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://*[text()="Save Quote"]</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.948" endtime="20220828 15:15:40.948"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.949" endtime="20220828 15:15:40.949"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.950" endtime="20220828 15:15:40.950"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[text()="Save Quote"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.950" endtime="20220828 15:15:40.950"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.950" endtime="20220828 15:15:40.950"/>
+</kw>
+<kw name="QC CREATED" library="Create Qoute">
+<status status="NOT RUN" starttime="20220828 15:15:40.951" endtime="20220828 15:15:40.951"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.951" endtime="20220828 15:15:40.951"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>xpath://*[text()="Save Quote"]</arg>
+<arg>100s</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.952" endtime="20220828 15:15:40.952"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>35s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://div[text()="Job"]/parent::h1/div/span</arg>
+<arg>120s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${CURJOB}</var>
+<arg>//div[text()="Job"]/parent::h1/div/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://div[text()="Job"]/parent::h1/div/span</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220828 15:15:40.953" endtime="20220828 15:15:40.953"/>
+</kw>
+<kw name="Check Price-1" library="EditeRemoveCreateQC">
+<arg>${Total_Exc}</arg>
+<arg>${Total_Inc}</arg>
+<status status="NOT RUN" starttime="20220828 15:15:40.954" endtime="20220828 15:15:40.954"/>
+</kw>
+<status status="FAIL" starttime="20220828 15:12:35.213" endtime="20220828 15:15:40.954">Element with locator 'xpath://*[@class="bv-item-container"]/div/div/div/div[2]/div/div[2]/button' not found.</status>
 </test>
 <kw name="Terminate Web Tests" library="Common" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 12:38:41.159" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220828 12:38:36.157" endtime="20220828 12:38:41.159"/>
+<msg timestamp="20220828 15:15:45.958" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220828 15:15:40.956" endtime="20220828 15:15:45.959"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220828 12:38:41.159" endtime="20220828 12:38:43.764"/>
+<status status="PASS" starttime="20220828 15:15:45.959" endtime="20220828 15:15:48.578"/>
 </kw>
-<status status="PASS" starttime="20220828 12:38:36.157" endtime="20220828 12:38:43.764"/>
+<status status="PASS" starttime="20220828 15:15:40.956" endtime="20220828 15:15:48.578"/>
 </kw>
 <doc>Creation Quick Quote Add(1 room,1 product)</doc>
-<status status="FAIL" starttime="20220828 12:33:15.802" endtime="20220828 12:38:43.764"/>
+<status status="FAIL" starttime="20220828 15:12:18.317" endtime="20220828 15:15:48.578"/>
 </suite>
 <statistics>
 <total>

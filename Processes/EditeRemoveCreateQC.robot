@@ -14,7 +14,7 @@ Check Price
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     sleep    5s
     Click Search CaesarStone Page    ${CURJOB}
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
     sleep    7s
     reload page
    # FOR    ${num}    IN RANGE    999
@@ -30,11 +30,11 @@ Check Price
    # END
     sleep    7s
     reload page
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
 
     #${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     #${Cur_Total_Inc}=    ProductPrice    ${var}
-    ${var}=     get text    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span
+    ${var}=     get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     ${Cur_Total_Exc}=    ProductPrice   ${var}
     #${Cur_Total_Inc}=    cutComma    ${Cur_Total_Inc}
     ${Cur_Total_Exc}=    cutComma    ${Cur_Total_Exc}
@@ -50,7 +50,7 @@ Check Price-1
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     sleep    5s
     Click Search CaesarStone Page    ${CURJOB}
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
     sleep    7s
     reload page
    # FOR    ${num}    IN RANGE    999
@@ -66,7 +66,7 @@ Check Price-1
    # END
     sleep    7s
     reload page
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
 
     ${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     #${Cur_Total_Inc}=    ProductPrice    ${var}
@@ -115,7 +115,7 @@ Check Price1
    # END
     sleep    7s
     reload page
-    wait until page contains element    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span    50s
+    wait until page contains element    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span    50s
 
     #${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     #${Cur_Total_Inc}=    ProductPrice    ${var}
