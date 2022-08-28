@@ -23,7 +23,9 @@ Verify Being On Page
 Retailer Log Out
     Wait Until Page Contains Element    xpath://*[text()="Good Work!"]    60s
     scroll element into view    xpath://*[@title="Expand search"]
+    sleep  4s
     click element    xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]
+    capture page screenshot
     click element    xpath://*[@title="Log Out"]
 
 Retailer Log Out-API
@@ -76,8 +78,9 @@ Navigating To "Experience As User"
 
 LogOut As Fabricator
     scroll element into view    xpath://*[@title="Expand search"]
-    sleep   3s
+    sleep   5s
     click element    xpath://*[@class="slds-button slds-no-space slds-m-bottom_xx-small"]
+    CAPTURE PAGE SCREENSHOT
     click element    xpath://*[@title="Log Out"]
 
 Search Job By Job Name

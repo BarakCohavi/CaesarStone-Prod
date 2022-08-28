@@ -9,7 +9,7 @@ Suite Teardown    Common.Terminate Web Tests
 
 *** Variables ***
 ${BROWSER} =    chrome
-${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768");add_argument("--headless")
+${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768")                #;add_argument("--headless")
 
 
 
@@ -26,7 +26,7 @@ Create Qoute -> Edit -> Remove (QC)
     Add SPLASHBACK
     Add Edge2
     Add CUTOUTS & SPECIALY CUTS & ADDITIONAL TRAVEL Edit
-
+    SLEEP   20s
     capture page screenshot
 
 

@@ -19,7 +19,6 @@ ${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disabl
 
 *** Test Cases ***
 Create Quick Quote as Retailer
-
     Create Quick Quote.Process
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     New Job.Process    ${CURJOB}
