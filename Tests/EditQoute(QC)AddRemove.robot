@@ -15,18 +15,50 @@ ${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disabl
 
 *** Test Cases ***
 Create Qoute -> Edit -> Remove (QC)
-    set selenium speed    0.5s
+   set selenium speed    0.5s
     Create Qoute.Proccess
+
+    ${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
+    ${Old_Total_Inc}=    ProductPrice    ${var}
+    ${var}=     get text    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span
+    ${Old_Total_Exc}=    ProductPrice   ${var}
+    ${Old_Total_Inc}=    cutComma    ${Old_Total_Inc}
+    ${Old_Total_Exc}=    cutComma    ${Old_Total_Exc}
+
     Click Edit Quote QC
     capture page screenshot
     Switch handle alert Edit
+    capture page screenshot
     SELECT FRAMES Edit
     CLICK ADD ROOM Edit
     Choose Room
     Add SPLASHBACK
     Add Edge2
     Add CUTOUTS & SPECIALY CUTS & ADDITIONAL TRAVEL Edit
-    SLEEP   20s
     capture page screenshot
+    ${Total_Inc}=    get text    xpath:(//*[@class="dcart-column__value"])[2]
+    ${Total_Exc}=    get text    xpath:(//*[@class="dcart-column__value"])[1]
+    ${Total_Inc}=    substringg    ${Total_Inc}   #to cut the dolar
+    ${Total_Exc}=    substringg    ${Total_Exc}
+    ${Total_Exc}=    multiple10    ${Total_Exc}
+    #log to console    hi again
+    click element    xpath://*[text()="Checkout Now"]
+    wait until page contains element    xpath://*[text()="Save Quote"]     60s
+    sleep    2s
+     ${url} =   get title
+    click element    xpath://*[text()="Save Quote"]
+    capture page screenshot
+    QC CREATED
+    capture page screenshot
+    wait until page does not contain element    xpath://*[text()="Save Quote"]    100s
+    sleep    35s
+    reload page
+    wait until page contains element     xpath://div[text()="Job"]/parent::h1/div/span   120s
+    ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
+    reload page
+    wait until page contains element    xpath://div[text()="Job"]/parent::h1/div/span    60s
+    Check Price-1    ${Total_Exc}    ${Total_Inc}    #check if price same before saving and after
+    #Compare New And Old Total Price    ${Old_Total_Exc}    ${Total_Exc} #check if the price changed
+
 
 
