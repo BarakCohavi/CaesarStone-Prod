@@ -41,7 +41,7 @@ Check Price
     scroll element into view    xpath://*[text()="Fabricator Comments"]
     capture page screenshot
     #should be true    ${Total_Inc} == ${Cur_Total_Inc}
-    should be true    ${Total_Exc} == ${Cur_Total_Exc}
+    should be true    ${Total_Inc} == ${Cur_Total_Exc}
 
 Check Price-1
     [Arguments]        ${Total_Inc}   ${Total_Exc}
@@ -77,7 +77,7 @@ Check Price-1
     scroll element into view    xpath://*[text()="Fabricator Comments"]
     capture page screenshot
     #should be true    ${Total_Inc} == ${Cur_Total_Inc}
-    should be true    ${Total_Exc} == ${Cur_Total_Exc}
+    should be true    ${Total_Inc} == ${Cur_Total_Exc}
 
 
 Varify Created Quote (one room & product)
