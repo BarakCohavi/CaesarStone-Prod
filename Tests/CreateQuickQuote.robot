@@ -8,7 +8,7 @@ Suite Setup    Login Retailer.Initiate Web Tests    ${BROWSER}    ${BROWSER_OPTI
 Suite Teardown    Common.Terminate Web Tests
 *** Variables ***
 ${BROWSER} =    chrome
-${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768");add_argument("--headless");add_argument("--disable-gpu")
+${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768")         #;add_argument("--headless");add_argument("--disable-gpu")
 
 
 ${room description} =    Kitchen 1
