@@ -20,10 +20,10 @@ Create Qoute one produst+room
     set selenium speed    0.5s
     Create Qoute.Process1 (one room & product)
     capture page screenshot
-    #${Total_Inc}=    get text    xpath:(//*[@class="dcart-column__value"])[2]
+    ${Total_Inc}=    get text    xpath:(//*[@class="dcart-column__value"])[2]
     ${Total_Exc}=    get text    xpath:(//*[@class="dcart-column__value"])[1]
-    #${Total_Inc}=    substringg    ${Total_Inc}   #to cut the dolar
-    ${Total_Inc}=    set variable    000
+    ${Total_Inc}=    substringg    ${Total_Inc}   #to cut the dolar
+    #${Total_Inc}=    set variable    000
     ${Total_Exc}=    substringg    ${Total_Exc}
     ${Total_Exc}=    multiple10    ${Total_Exc}
     Create Qoute.Process2 (one room & product)
