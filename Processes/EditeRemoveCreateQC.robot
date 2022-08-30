@@ -38,7 +38,7 @@ Check Price
     ${Cur_Total_Exc}=    ProductPrice   ${var}
     #${Cur_Total_Inc}=    cutComma    ${Cur_Total_Inc}
     ${Cur_Total_Exc}=    cutComma    ${Cur_Total_Exc}
-    scroll element into view    xpath://*[text()="Total Retail Price Inc GST"]
+    scroll element into view    xpath://*[text()="Last Modified By"]
     capture page screenshot
     #should be true    ${Total_Inc} == ${Cur_Total_Inc}
     should be true    ${Total_Inc} == ${Cur_Total_Exc}

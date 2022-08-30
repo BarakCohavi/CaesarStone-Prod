@@ -32,7 +32,7 @@ Proccess
     sleep    35s
     reload page
     wait until page contains element   xpath://*[text()="Job"]    120s
-    Check Price    ${Total_Inc}    ${Total_Exc}
+    Check Price    ${Total_Exc}  ${Total_Inc}
     VARIFY QC CREATED
 
 Process1 (one room & product)
