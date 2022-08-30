@@ -160,7 +160,7 @@ Verifying "New Quote" Was Created
     wait until page does not contain    COC Uploaded
     wait until page contains    Job Product Name
     Check There Quote With Products
-    There Is Price More Than Zero For Every Product
+    #There Is Price More Than Zero For Every Product
     capture page screenshot
 
 
