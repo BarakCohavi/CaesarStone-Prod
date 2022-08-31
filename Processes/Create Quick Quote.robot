@@ -49,7 +49,7 @@ Process
 
 Clicking "Create Quick Quote" On Navbar
     Verify Being On "Retailer" Page
-    click element    xpath://*[@id="5"]
+    click element    xpath://*[@id="6"]
     capture page screenshot
     sleep    4s
     ${present}=     get element count    xpath://*[text()="Please fill in the consumer details"]
