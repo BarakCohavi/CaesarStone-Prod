@@ -26,7 +26,6 @@ ${CityInput}=     City
 
 *** Test Cases ***
 E2E Create Qoute
-    set selenium speed    0.5s
     Create Qoute.Proccess
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     New Job.Process    ${CURJOB}
