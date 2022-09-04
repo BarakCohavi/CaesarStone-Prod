@@ -9,7 +9,7 @@ Suite Teardown    Common.Terminate Web Tests
 
 *** Variables ***
 ${BROWSER} =    chrome
-${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768")                #;add_argument("--headless")
+${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disable-notifications");add_argument("--disable-popup-blocking");add_experimental_option('excludeSwitches', ['enable-logging']);add_argument("--window-size=1360,768");add_argument("--headless")
 
 
 
@@ -17,14 +17,12 @@ ${BROWSER_OPTIONS} =    add_argument("--start-maximized");add_argument("--disabl
 Create Qoute -> Edit -> Remove (QC)
     set selenium speed    0.5s
     Create Qoute.Proccess
-
     ${var}=    get text    xpath://*[text()="Total Retail Price Inc GST"]/parent::div/following-sibling::div/span/span
     ${Old_Total_Inc}=    ProductPrice    ${var}
     ${var}=     get text    xpath://*[text()="Total Retail Price Exc GST"]/parent::div/following-sibling::div/span/span
     ${Old_Total_Exc}=    ProductPrice   ${var}
     ${Old_Total_Inc}=    cutComma    ${Old_Total_Inc}
     ${Old_Total_Exc}=    cutComma    ${Old_Total_Exc}
-
     Click Edit Quote QC
     capture page screenshot
     Switch handle alert Edit
@@ -56,27 +54,51 @@ Create Qoute -> Edit -> Remove (QC)
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span
     reload page
     wait until page contains element    xpath://div[text()="Job"]/parent::h1/div/span    60s
-    #Check Price-1    ${Total_Exc}    ${Total_Inc}    #check if price same before saving and after
-
     Click Edit Quote QC
     capture page screenshot
-    Switch handle alert Edit
+    sleep    2s
+    Switch Window  title:Quote
+    scroll element into view   xpath://*[@class="DESKTOP comm-panels-container uiContainerManager siteforcePanelsContainer"]
     capture page screenshot
     SELECT FRAMES Edit
-
-    #Compare New And Old Total Price    ${Old_Total_Exc}    ${Total_Exc} #check if the price changed
-
     Delete Room
+    Checkout && Save Qoute
+    Varify Created Quote
+
 
 
 
 *** Keywords ***
 Delete Room
-    sleep    2s
-    wait until element contains  //*[@class="quotes-list__item-delete ui-delete"]      120s
     capture page screenshot
-    click element  //*[@class="quotes-list__item-delete ui-delete"]
+    click element    xpath://*[@class="quotes-list__item-delete ui-delete"]
     capture page screenshot
     wait until page does not contain element    //*[@class="quotes-list__item-delete ui-delete"]   120s
     capture page screenshot
     sleep  4s
+
+
+Varify Created Quote
+     Wait Until Page Contains Element    xpath://*[text()="Installation Date Preference"]    60s
+    scroll element into view    xpath://*[text()="Installation Date Preference"]
+    wait until page contains element    xpath://*[text()="View All"]    90s
+    scroll element into view    xpath://*[text()="View All"]
+    click element    xpath://*[text()="View All"]
+    sleep    2s
+    capture page screenshot
+    ${CountProducts}=    get element count    xpath:(//*[contains(text(),"Kitchen")])
+    should be true    ${CountProducts}>=1
+
+
+Checkout && Save Qoute
+    click element    xpath://*[text()="Checkout Now"]
+    wait until page contains element    xpath://*[text()="Save Quote"]     60s
+    sleep    2s
+    #${url} =   get title
+    click element    xpath://*[text()="Save Quote"]
+    capture page screenshot
+    QC CREATED
+    capture page screenshot
+    wait until page does not contain element    xpath://*[text()="Save Quote"]    100s
+    sleep    35s
+    reload page
