@@ -55,7 +55,7 @@ Library    ../Processes/functions.py
     sleep    0.5s
     click element    (//*[text()="No"])[2]
     scroll element into view    xpath://*[text()="Bill To Usage ID"]
-    input text    //*[text()="ORG ID"]/parent::label/following-sibling::input    201
+    #input text    //*[text()="ORG ID"]/parent::label/following-sibling::input    201
     click element    xpath://*[@title="Save"]
     wait until page does not contain element    xpath://*[@title="Save"]    60s
     sleep    3s
@@ -115,7 +115,7 @@ Create new K&B account and fill the fields
     click element    //*[text()="Platinum"]
 
     scroll element into view    xpath://*[text()="SLX Account Id"]
-    input text    //*[text()="ORG ID"]/parent::label/following-sibling::input    201
+    #input text    //*[text()="ORG ID"]/parent::label/following-sibling::input    201
     click element    xpath://*[@title="Save"]
     wait until page does not contain element    xpath://*[@title="Save"]    60s
     sleep    3s
@@ -257,10 +257,15 @@ Select Edit Access to CS Connect & Primary Owner
 
 Search Contact
     [Arguments]    ${VAR}
+
+
+    reload page
+    sleep    10s
     click element    xpath:(//*[@data-key="search"])
-    sleep    1s
-    wait until element is enabled    (//*[@type="search"])[5]    50s
-    input text   (//*[@type="search"])[5]    ${VAR}
+    wait until element is enabled    (//*[@type="search"])[2]    50s
+
+    #wait until page does not contain element    xpath://*[contains(text(),"was created")]    50s
+    input text   //*[@class="slds-input"]    ${VAR}
     #click element    xpath://*[@title="Search"]
     sleep    10s
     #Wait Until Page Contains Element    xpath://*[@title="${VAR}"]    60s

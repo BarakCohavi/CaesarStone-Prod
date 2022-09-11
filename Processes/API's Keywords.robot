@@ -172,18 +172,15 @@ API - Change Measurement && Installation Time
 
 
 AUTHENTICATION
-    ${AppURL}   set variable    https://test.salesforce.com
+    ${AppURL}   set variable    https://login.salesforce.com
     ${HEADERS}  set variable    application/x-www-form-urlencoded
-    ${body}   create dictionary    grant_type=password    client_id=3MVG9T992fY2Y4vvJxJ55IpDkio0xMNCUY_LWU4Mg4skz_90qwAiTjXF6h17c9xSdQfgzEwz94FqRcrbylyrf   client_secret=05BA1D9BB0922A49E4C0D83DFC8289C7BED0B5000057EF67AFCEABE8B32CDBB4    username=caesarstone.testing@gmail.com.admin    password=qualitest1234iPf3i6Dxiy9OwypTL4jbakNdo
+    ${body}   create dictionary    grant_type=password    client_id=3MVG9TSaZ8P6zP1oTfwS2zgWj9O89n._bUFRC1cVJ8OUKbBXK1DfWtEBSa7WFYKwTL4KdL_7yFqw59rHDVmQ5   client_secret=A7313A862582C8B88AFCD7F7D1B0D23E956151415B5A73E743B0A9E368C198A8    username=sftestuser@caesarstone.com    password=1q2w3e4r5t6yuHqdINm1QvZbC3SAcbyTHQ1u
     create session    myssion    ${AppURL}
     ${Response}=    post on session    myssion     /services/oauth2/token    data=${body}
     should be equal as integers    ${Response.status_code}    200
     ${jsonres}=    set variable    ${Response.json()}
     ${access_token}=    get from dictionary     ${jsonres}    access_token
     ${token_type}=    get from dictionary     ${jsonres}    token_type
-    #log to console     ${jsonres}
-    #log to console     11111111111
-    #log to console     ${access_token}
     [Return]    ${access_token}    ${token_type}
 
 
@@ -243,7 +240,7 @@ CREATE NEW JOB
 
     ${header}    set variable    ${token_type} ${access_token}
     ${headers}   create dictionary    Content-Type=application/json    Authorization=${header}
-    ${AppURL}   set variable    https://caesarstone--cspartial.my.salesforce.com
+    ${AppURL}   set variable    https://caesarstone.my.salesforce.com
     #${HEADERS}  set variable    application/x-www-form-urlencoded
     &{body}   create dictionary    Status__c=Quote    Retailer__c=0015t000002ZDK9AAO    RetailerDesigner__c=0035t000006quv9AAA    Job_Source__c=API    ConsumerLastName__c=Sean    ConsumerFirstName__c=Kingstone    ConsumersCity__c=GUNDAGAI    ConsumersCountry__c=Australia    ConsumersEmail__c=seankingstone1@deloitte.co.il    ConsumersPhone__c=06577575    ConsumersState__c=Victoria    ConsumersPostalCode__c=2722    ConsumersStreet__c=11 Greenlee Street
     create session    myssion1    ${AppURL}
