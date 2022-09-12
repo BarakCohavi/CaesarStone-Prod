@@ -41,7 +41,7 @@ API - Validate Acceptance Fabricator API
     [Arguments]   ${access_token}    ${token_type}    ${JobId}
     ${header}    set variable    ${token_type} ${access_token}
     ${headers}   create dictionary    Content-Type=application/json    Authorization=${header}
-    ${AppURL}   set variable    https://caesarstone--cspartial.my.salesforce.com
+    ${AppURL}   set variable    https://caesarstone.my.salesforce.com
     #${HEADERS}  set variable    application/x-www-form-urlencoded
     &{body}   create dictionary   FabricatorApprovalForThisJob__c=Yes
     create session    myssion6    ${AppURL}
@@ -242,7 +242,7 @@ CREATE NEW JOB
     ${headers}   create dictionary    Content-Type=application/json    Authorization=${header}
     ${AppURL}   set variable    https://caesarstone.my.salesforce.com
     #${HEADERS}  set variable    application/x-www-form-urlencoded
-    &{body}   create dictionary    Status__c=Quote    Retailer__c=0015t000002ZDK9AAO    RetailerDesigner__c=0035t000006quv9AAA    Job_Source__c=API    ConsumerLastName__c=Sean    ConsumerFirstName__c=Kingstone    ConsumersCity__c=GUNDAGAI    ConsumersCountry__c=Australia    ConsumersEmail__c=seankingstone1@deloitte.co.il    ConsumersPhone__c=06577575    ConsumersState__c=Victoria    ConsumersPostalCode__c=2722    ConsumersStreet__c=11 Greenlee Street
+    &{body}   create dictionary    Status__c=Quote    Retailer__c=0013V00000Ibo7TQAR    RetailerDesigner__c=0033V00000QR1D0QAL    Job_Source__c=API    ConsumerLastName__c=Sean    ConsumerFirstName__c=Kingstone    ConsumersCity__c=GUNDAGAI    ConsumersCountry__c=Australia    ConsumersEmail__c=seankingstone1@deloitte.co.il    ConsumersPhone__c=06577575    ConsumersState__c=Victoria    ConsumersPostalCode__c=2722    ConsumersStreet__c=11 Greenlee Street
     create session    myssion1    ${AppURL}
     ${Response}=    post on session    myssion1     /services/data/v52.0/sobjects/Job__c    json=${body}    headers=${headers}
     #The request has been successfully processed and the resource has been created.
@@ -293,7 +293,7 @@ GET JOB NAME “NEW JOB”
 
     ${header}    set variable    ${token_type} ${access_token}
     ${headers}   create dictionary    Content-Type=application/json    Authorization=${header}
-    ${AppURL}   set variable    https://caesarstone--cspartial.my.salesforce.com
+    ${AppURL}   set variable    https://caesarstone.my.salesforce.com
     #${HEADERS}  set variable    application/x-www-form-urlencoded
     &{body}   create dictionary   FabricatorApprovalForThisJob__c=Yes
     create session    myssion6    ${AppURL}
