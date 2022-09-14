@@ -23,7 +23,7 @@ Retailer Onboarding- New Account
     varify New Account created
 
 Retailer Onboarding- New Contact
-    [Tags]    New Contact
+    #[Tags]    New Contact
     ${contact}    Step 2 - New Contact
     ${VAR}=    get text    xpath://*[@class="custom-truncate"]
     Save Contact

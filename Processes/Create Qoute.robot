@@ -212,7 +212,7 @@ Choose Room
     END
 
     wait until element is visible    xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button    90s
-    sleep    2s
+    sleep    5s
     click button    xpath://*[@class="bv-item-container"]/div/div/div/div/div/div[2]/button
     wait until element is visible    xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]    90s
     click button    xpath://*[@class="ui-quantity-button ui-quantity-button--plus"]
