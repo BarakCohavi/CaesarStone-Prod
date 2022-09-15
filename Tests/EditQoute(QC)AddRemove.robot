@@ -57,13 +57,13 @@ Create Qoute -> Edit -> Remove (QC)
     Click Edit Quote QC
     capture page screenshot
     sleep    2s
-    Switch Window  title:Quote
-    scroll element into view   xpath://*[@class="DESKTOP comm-panels-container uiContainerManager siteforcePanelsContainer"]
-    capture page screenshot
-    SELECT FRAMES Edit
-    Delete Room
-    Checkout && Save Qoute
-    Varify Created Quote
+    #Switch Window  title:Quote
+    #scroll element into view   xpath://*[@class="DESKTOP comm-panels-container uiContainerManager siteforcePanelsContainer"]
+    #capture page screenshot
+    #SELECT FRAMES Edit
+    #Delete Room
+    #Checkout && Save Qoute
+    #Varify Created Quote
 
 
 
