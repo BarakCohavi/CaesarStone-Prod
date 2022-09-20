@@ -48,7 +48,7 @@ Create Qoute -> Edit -> Remove (QC)
     QC CREATED
     capture page screenshot
     wait until page does not contain element    xpath://*[text()="Save Quote"]    100s
-    sleep    35s
+    sleep    55s
     reload page
     wait until page contains element     xpath://div[text()="Job"]/parent::h1/div/span   120s
     ${CURJOB}=    get text    //div[text()="Job"]/parent::h1/div/span

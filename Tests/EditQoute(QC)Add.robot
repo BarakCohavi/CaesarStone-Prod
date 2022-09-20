@@ -60,7 +60,7 @@ Create Qoute one produst+room
     #sleep    10s
 
     #View & Process Job
-    sleep    35s
+    sleep    55s
     reload page
     wait until page contains element     xpath://div[text()="Job"]/parent::h1/div/span   120s
     #log to console    yallah do it
