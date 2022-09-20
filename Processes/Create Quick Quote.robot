@@ -173,7 +173,7 @@ There Is Price More Than Zero For Every Product
         END
     END
 Check There Quote With Products
-    ${CountProducts}=    get element count    xpath://*[contains(text(),"Kitchen 1")]
+    ${CountProducts}=    get element count    xpath://*[contains(text(),"Kitchen")]
     should be true    ${CountProducts}>=5
 
 
@@ -190,7 +190,7 @@ Verifying Quick Quote Was Created
 
 Check There Is A Product
     capture page screenshot
-    ${CountProducts}=    get element count    xpath:(//*[contains(text(),"Kitchen 1")])
+    ${CountProducts}=    get element count    xpath:(//*[contains(text(),"Kitchen")])
     should be true    ${CountProducts}>=2
 
 Click Close
